@@ -14,19 +14,19 @@ const DailyRotateFile = require('winston-daily-rotate-file')
 const modify = require('./modify.js')
 
 // config constants
-const host = config.get('un-s.host')
-const port = config.get('un-s.port') 
+const host = config.get('un-l.host')
+const port = config.get('un-l.port') 
 const wtpsThreshold = config.get('wtpsThreshold')
 const monitorPeriod = config.get('monitorPeriod')
-const Z = config.get('un-s.Z')
-const dbUser = config.get('un-s.dbUser')
-const dbPassword = config.get('un-s.dbPassword')
-const relations = config.get('un-s.relations')
+const Z = config.get('clearmap.Z')
+const dbUser = config.get('un-l.dbUser')
+const dbPassword = config.get('un-l.dbPassword')
+const relations = config.get('clearmap.relations')
 const defaultDate = new Date(config.get('defaultDate'))
-const mbtilesDir = config.get('un-s.mbtilesDir')
+const mbtilesDir = config.get('clearmap.mbtilesDir')
 const logDir = config.get('logDir')
-const propertyBlacklist = config.get('un-s.propertyBlacklist')
-const conversionTilelist = config.get('un-s.conversionTilelist')
+const propertyBlacklist = config.get('clearmap.propertyBlacklist')
+const conversionTilelist = config.get('clearmap.conversionTilelist')
 const spinnerString = config.get('spinnerString')
 const fetchSize = config.get('fetchSize')
 const tippecanoePath = config.get('tippecanoePath')
@@ -38,7 +38,7 @@ winston.configure({
   format: winston.format.simple(),
   transports: [ 
     new DailyRotateFile({
-      filename: `${logDir}/produce-un-small-%DATE%.log`,
+      filename: `${logDir}/produce-clearmap-%DATE%.log`,
       datePattern: 'YYYY-MM-DD',
       maxSize: '20m',
       maxFiles: '14d'
@@ -269,13 +269,13 @@ const queueTasks = () => {
 // shutdown this system
 const shutdown = () => {
   winston.info(`${iso()}: production system shutdown.`)
-  console.log('** production system for un-s shutdown! **')
+  console.log('** production system for clearmap shutdown! **')
 //  sar.kill()
   process.exit(0)
 }
 
 const main = async () => {
-  winston.info(`${iso()}: un-s production started.`)
+  winston.info(`${iso()}: clearmap production started.`)
   await getScores()
   queueTasks()
   queue.on('drain', () => {

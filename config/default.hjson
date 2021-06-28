@@ -184,7 +184,7 @@ sde_pg_3::vectortile::buildings_a
     un_base::vectortile::unhq_wbya10
     un_base::vectortile::unhq_dral10
   ]
-  mbtilesDir: clearmap_tiles
+  mbtilesDir: produce-clearmap/cleamaptile
   propertyBlacklist: [
     description
     fid
