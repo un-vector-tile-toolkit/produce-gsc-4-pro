@@ -163,6 +163,42 @@ sde_pg_3::vectortile::buildings_a
     pseudoarea
   ]
 }
+  clearmap: {
+  Z: 0
+  relations: [
+    un_base::vectortile::custom_planet_land_08_a  
+    un_base::vectortile::custom_planet_ocean_08_a
+    un_base::vectortile::un_glc30_global_lc_ss_a
+    un_base::vectortile::unmap_bndl_l
+    un_base::vectortile::unmap_bndl05_l
+    un_base::vectortile::unmap_bndl25_l
+    un_base::vectortile::custom_ne_rivers_lakecentrelines_l
+    un_base::vectortile::unmap_bnda_cty_anno_03_p
+    un_base::vectortile::unmap_bnda_cty_anno_04_p
+    un_base::vectortile::unmap_bnda_cty_anno_05_p
+    un_base::vectortile::unmap_bnda_cty_anno_06_p
+    un_base::vectortile::unmap_phyp_label_04_p
+    un_base::vectortile::unmap_phyp_label_06_p
+    un_base::vectortile::unmap_phyp_p
+    un_base::vectortile::unmap_popp_p
+    un_base::vectortile::unhq_wbya10
+    un_base::vectortile::unhq_dral10
+  ]
+  mbtilesDir: clearmap_tiles
+  propertyBlacklist: [
+    description
+    fid
+    fid_1
+    globalid
+    id
+    objectid_1
+    osm_id
+    pseudoarea
+  ]
+  conversionTilelist: [
+  0-0-0
+  ]
+  }
   wtpsThreshold: 50
   monitorPeriod: 10
   concurrentS: 1

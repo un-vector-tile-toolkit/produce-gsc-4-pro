@@ -245,10 +245,10 @@ const lut = {
 
   if (f.properties.cartolb === 'Alofi' ||f.properties.cartolb === 'Avarua' ||f.properties.cartolb === 'Sri Jayewardenepura Kotte' ) {
     return null
-  } else if (f.properties.poptyp_code == 1 || f.properties.poptyp_code == 2) {
+  } else if (f.properties.poptyp == 1 || f.properties.poptyp == 2) {
     f.tippecanoe.minzoom = 6 
    return f
-  } else if (f.properties.poptyp_code == 3 && f.properties.scl_id_code == 10) {
+  } else if (f.properties.poptyp == 3 && f.properties.scl_id == 10) {
     f.tippecanoe.minzoom = 6
    return f
   } else {
