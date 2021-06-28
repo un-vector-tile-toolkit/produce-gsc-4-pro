@@ -354,7 +354,7 @@ const lut = {
      return null
    }
   },
-  unhq_wbya10: f => {
+  unmap_wbya10_a: f => {
     f.tippecanoe = {
       layer: 'wbya10',
       minzoom: 2,
@@ -364,7 +364,7 @@ const lut = {
     delete f.properties['fid_1']
     return f
   },
-  unhq_dral10: f => {
+  unmap_dral10_l: f => {
     f.tippecanoe = {
       layer: 'dral10',
       minzoom: 2,
