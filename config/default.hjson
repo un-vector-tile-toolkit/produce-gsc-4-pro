@@ -62,6 +62,7 @@ un-l: {
   dbPassword: ABCDEFG
   relations: [
     un_base::vectortile::custom_planet_land_main_a
+    un_base::vectortile::custom_planet_land_antarctica_a
     un_base::vectortile::custom_planet_land_08_a
     un_base::vectortile::unmap_bndl_l
     un_base::vectortile::custom_unmap_bndl_l
