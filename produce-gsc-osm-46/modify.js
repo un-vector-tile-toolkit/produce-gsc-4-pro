@@ -106,6 +106,8 @@ const minzoomWater = (f) => {
     return 9
   } else if (f.properties.fclass === 'reservoir') {
     return 9
+  } else if (f.properties.fclass === 'dock') {
+    return 9
   } else {
     throw new Error(`monzoomWater: ${f.properties}`)
   }
