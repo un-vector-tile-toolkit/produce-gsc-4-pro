@@ -35,8 +35,8 @@ un-s: {
 osm-s: {
   Z: 0
   relations: [
-   sde_pg_3::vectortile::landuse_naturalmedium0609_a
-   sde_pg_3::vectortile::roads_major_0408_l 
+   osm_planet::vectortile::landuse_naturalmedium0609_a
+   osm_planet::vectortile::roads_major_0408_l 
    ]
   mbtilesDir: produce-gsc-small/osm-s-tile
   propertyBlacklist: [
@@ -108,41 +108,41 @@ osm-l: {
   dbUser: postgress
   dbPassword: ABCDEFG
   relations: [
-sde_pg_3::vectortile::ferries_all_l              
-sde_pg_3::vectortile::landuse_naturallarge_a     
-sde_pg_3::vectortile::landuse_naturalmedium_a    
-sde_pg_3::vectortile::landuse_other_p            
-sde_pg_3::vectortile::landuse_parkreserve_a      
-sde_pg_3::vectortile::landuse_urban_a            
-sde_pg_3::vectortile::places_all_a               
-sde_pg_3::vectortile::places_all_p               
-sde_pg_3::vectortile::pois_heritage_ap           
-sde_pg_3::vectortile::pois_heritage_p            
-sde_pg_3::vectortile::pois_other_ap              
-sde_pg_3::vectortile::pois_other_p               
-sde_pg_3::vectortile::pois_public_ap             
-sde_pg_3::vectortile::pois_public_p              
-sde_pg_3::vectortile::pois_services_ap           
-sde_pg_3::vectortile::pois_services_p            
-sde_pg_3::vectortile::pois_traffic_p             
-sde_pg_3::vectortile::pois_transport_a           
-sde_pg_3::vectortile::pois_transport_ap          
-sde_pg_3::vectortile::pois_transport_p           
-sde_pg_3::vectortile::pois_water_p               
-sde_pg_3::vectortile::pois_worship_ap            
-sde_pg_3::vectortile::pois_worship_p             
-sde_pg_3::vectortile::railways_all_l             
-sde_pg_3::vectortile::roads_all_a
-sde_pg_3::vectortile::roads_special_l                
-sde_pg_3::vectortile::roads_major_l              
-sde_pg_3::vectortile::roads_medium_l    
-sde_pg_3::vectortile::roads_minor_l              
-sde_pg_3::vectortile::roads_other_l              
-sde_pg_3::vectortile::runways_all_l              
-sde_pg_3::vectortile::water_all_a                
-sde_pg_3::vectortile::waterways_large_l          
-sde_pg_3::vectortile::waterways_small_l
-sde_pg_3::vectortile::buildings_a          
+osm_planet::vectortile::ferries_all_l              
+osm_planet::vectortile::landuse_naturallarge_a     
+osm_planet::vectortile::landuse_naturalmedium_a    
+osm_planet::vectortile::landuse_other_p            
+osm_planet::vectortile::landuse_parkreserve_a      
+osm_planet::vectortile::landuse_urban_a            
+osm_planet::vectortile::places_all_a               
+osm_planet::vectortile::places_all_p               
+osm_planet::vectortile::pois_heritage_ap           
+osm_planet::vectortile::pois_heritage_p            
+osm_planet::vectortile::pois_other_ap              
+osm_planet::vectortile::pois_other_p               
+osm_planet::vectortile::pois_public_ap             
+osm_planet::vectortile::pois_public_p              
+osm_planet::vectortile::pois_services_ap           
+osm_planet::vectortile::pois_services_p            
+osm_planet::vectortile::pois_traffic_p             
+osm_planet::vectortile::pois_transport_a           
+osm_planet::vectortile::pois_transport_ap          
+osm_planet::vectortile::pois_transport_p           
+osm_planet::vectortile::pois_water_p               
+osm_planet::vectortile::pois_worship_ap            
+osm_planet::vectortile::pois_worship_p             
+osm_planet::vectortile::railways_all_l             
+osm_planet::vectortile::roads_all_a
+osm_planet::vectortile::roads_special_l                
+osm_planet::vectortile::roads_major_l              
+osm_planet::vectortile::roads_medium_l    
+osm_planet::vectortile::roads_minor_l              
+osm_planet::vectortile::roads_other_l              
+osm_planet::vectortile::runways_all_l              
+osm_planet::vectortile::water_all_a                
+osm_planet::vectortile::waterways_large_l          
+osm_planet::vectortile::waterways_small_l
+osm_planet::vectortile::buildings_a   
   ]
   mbtilesDir: produce-gsc-osm-46/mbtiles/osm_tile
   mbtilesDir_every: produce-gsc-osm-46/mbtiles/osm_tile_every
