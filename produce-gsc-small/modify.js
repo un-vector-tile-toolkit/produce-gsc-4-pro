@@ -127,6 +127,16 @@ const lut = {
     delete f.properties['id']
     return f
   },
+  custom_ne_10m_bathymetry_a: f => {
+    f.tippecanoe = {
+      layer: 'bathymetry',
+      minzoom: 2,
+      maxzoom: 5
+    }
+    delete f.properties['objectid']
+    delete f.properties['fid_1']
+    return f
+  },
   unmap_bndl_l: f => {
     f.tippecanoe = {
       layer: 'bndl',
