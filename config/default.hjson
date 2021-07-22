@@ -16,6 +16,7 @@ un-s: {
    un_base::vectortile::unmap_phyp_label_06_p
    un_base::vectortile::unmap_phyp_p
    un_base::vectortile::unmap_popp_p
+   un_base::vectortile::custom_ne_10m_bathymetry_a
    ]
   mbtilesDir: produce-gsc-small/un-s-tile
   propertyBlacklist: [
@@ -184,6 +185,7 @@ osm_planet::vectortile::buildings_a
     un_base::vectortile::unmap_popp_p
     un_base::vectortile::unmap_wbya10_a
     un_base::vectortile::unmap_dral10_l
+    un_base::vectortile::custom_ne_10m_bathymetry_a
   ]
   mbtilesDir: produce-clearmap/clearmaptile
   propertyBlacklist: [

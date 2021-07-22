@@ -65,6 +65,16 @@ const lut = {
     delete f.properties['fid_1']
     return f
   },
+  custom_ne_10m_bathymetry_a: f => {
+    f.tippecanoe = {
+      layer: 'bathymetry',
+      minzoom: 2,
+      maxzoom: 5
+    }
+    delete f.properties['objectid']
+    delete f.properties['fid_1']
+    return f
+  },
   un_glc30_global_lc_ss_a: f => {
     f.tippecanoe = {
       layer: 'landcover',
