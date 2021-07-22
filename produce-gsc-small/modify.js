@@ -187,7 +187,7 @@ const lut = {
     delete f.properties['mission']
     return f
   },
-  unmap_bnda_cty_anno_03_p: f => {
+  unmap_bnda_label_03_p: f => {
     f.tippecanoe = {
       layer: 'lab_cty',
       minzoom: 1,
@@ -202,7 +202,7 @@ const lut = {
     delete f.properties['symbolid']
     return f
   },
-  unmap_bnda_cty_anno_04_p: f => {
+  unmap_bnda_label_04_p: f => {
     f.tippecanoe = {
       layer: 'lab_cty',
       minzoom: 2,
@@ -217,7 +217,7 @@ const lut = {
     delete f.properties['symbolid']
     return f
   },
-  unmap_bnda_cty_anno_05_p: f => {
+  unmap_bnda_label_05_p: f => {
     f.tippecanoe = {
       layer: 'lab_cty',
       minzoom: 3,
@@ -232,7 +232,7 @@ const lut = {
     delete f.properties['symbolid']
     return f
   },
-  unmap_bnda_cty_anno_06_p: f => {
+  unmap_bnda_label_06_p: f => {
     f.tippecanoe = {
       layer: 'lab_cty',
       minzoom: 4,

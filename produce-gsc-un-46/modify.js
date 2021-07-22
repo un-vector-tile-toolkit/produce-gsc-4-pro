@@ -366,7 +366,7 @@ f.properties.display = 1
     }
     return f
   },
-  unmap_bnda_cty_anno_06_p: f => {
+  unmap_bnda_label_06_p: f => {
     f.tippecanoe = {
       layer: 'lab_cty',
       minzoom: 6,
