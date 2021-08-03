@@ -124,14 +124,6 @@ const lut = {
     }
     f.properties._source = 'c'
     delete f.properties['objectid']
-    delete f.properties['name1']
-    delete f.properties['cnty1']
-    delete f.properties['name2']
-    delete f.properties['cnty2']
-    delete f.properties['adm1_name1']
-    delete f.properties['adm1_name2']
-    delete f.properties['adm2_name1']
-    delete f.properties['adm2_name2']
   if (f.properties.type == '3') {
     f.tippecanoe.minzoom = 6
     f.properties.bdytyp = '6'
@@ -140,7 +132,7 @@ const lut = {
     f.properties.bdytyp = '7'
   } else {
     f.tippecanoe.minzoom = 6
-    f.properties.bdytyp = f.properties.typ
+    f.properties.bdytyp = f.properties.type
   }
     return f
   },
