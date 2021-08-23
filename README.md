@@ -22,3 +22,7 @@ Please be advised that "work_every" and "work_day0x" newly create (update) the d
 un-sourced vector tiles --> ./produce-gsc-un-46/mbtiles/un_tile  
 osm-source vector tiles --> ./produce-gsc-osm-46/mbtiles/osm_tile_day0x, or ./produce-gsc-osm-46/mbtiles/osm_tile_every  
 merged tiles (un and osm) --> ./large_tiles/unosmosm_tile_day0x, or ./large_tiles/unosmosm_tile_every  
+
+## Tips
+When you run the script using crontab, make sure that you specify the path of tile-join properly. (instead of "tile-join", you may need to use /usr/local/bin/tile-join) 
+ 
