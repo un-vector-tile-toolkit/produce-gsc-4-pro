@@ -288,13 +288,8 @@ const lut = {
       maxzoom: 15
     }
     delete f.properties['class']
-    delete f.properties['fclass']
     delete f.properties['ungsc_ctry']
     delete f.properties['ungsc_mission']
-    delete f.properties['z_order']
-  if (f.properties.status === 'f') {
-    delete f
-  }
     return f
   },
   // 7. structure
@@ -316,18 +311,11 @@ const lut = {
       maxzoom: 15
     }
     delete f.properties['class']
-    delete f.properties['fclass']
-    delete f.properties['en_name']
-    delete f.properties['int_name']
-    delete f.properties['name']
-    delete f.properties['ar_name']
-    delete f.properties['building']
-    delete f.properties['building_bool']
-    delete f.properties['ungsc_mission']
     delete f.properties['ungsc_ctry']
-  if (f.properties.status === 'f') {
-    delete f
-  }
+    if (f.properties.ungsc_mission === 'UNMIK') {
+      f.properties.name = ''
+    }
+    delete f.properties['ungsc_mission']
     return f
   },
   pois_transport_a: f => {
@@ -359,9 +347,10 @@ const lut = {
       minzoom: 12,
       maxzoom: 15
     }
-    delete f.properties['min_height']
-    delete f.properties['building_min_level']
-    delete f.properties['roof_shape']
+    delete f.properties['class']
+    delete f.properties['z_order']
+    delete f.properties['ungsc_ctry']
+    delete f.properties['ungsc_mission']
     return f
   },
   osm_planet_other_buildings: f => {
@@ -543,11 +532,6 @@ const lut = {
     maxzoom: 15
     }
   delete f.properties['class']
-  delete f.properties['fclass']
-  delete f.properties['religion']
-  delete f.properties['fclass']
-  delete f.properties['denomination']
-  delete f.properties['ungsc_ctry']
   if (f.properties.ungsc_mission === 'UNMIK' || f.properties.status === 'f') {
     delete f
   }
@@ -560,13 +544,6 @@ const lut = {
       maxzoom: 15
     }
    delete f.properties['class']
-   delete f.properties['fclass']
-   delete f.properties['religion']
-   delete f.properties['denomination']
-   delete f.properties['historic']
-   delete f.properties['damage']
-   delete f.properties['damage_type']
-   delete f.properties['disused']
   if (f.properties.ungsc_mission === 'UNMIK' || f.properties.status === 'f') {
     delete f
   }
@@ -663,14 +640,6 @@ const lut = {
       maxzoom: 15
     }
     delete f.properties['class']
-    delete f.properties['en_name']
-    delete f.properties['int_name']
-    delete f.properties['name']
-    delete f.properties['ar_name']
-    delete f.properties['ungsc_ctry']
-  if (f.properties.fclass === 'maritime' || f.properties.status === 'f') {
-    delete f
-  }
     return f 
 },
   landuse_other_p: f => {

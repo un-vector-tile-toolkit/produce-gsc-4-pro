@@ -112,7 +112,6 @@ osm-l: {
 osm_planet::vectortile::ferries_all_l              
 osm_planet::vectortile::landuse_naturallarge_a     
 osm_planet::vectortile::landuse_naturalmedium_a    
-osm_planet::vectortile::landuse_other_p            
 osm_planet::vectortile::landuse_parkreserve_a      
 osm_planet::vectortile::landuse_urban_a            
 osm_planet::vectortile::places_all_a               
@@ -133,7 +132,6 @@ osm_planet::vectortile::pois_water_p
 osm_planet::vectortile::pois_worship_ap            
 osm_planet::vectortile::pois_worship_p             
 osm_planet::vectortile::railways_all_l             
-osm_planet::vectortile::roads_all_a
 osm_planet::vectortile::roads_special_l                
 osm_planet::vectortile::roads_major_l              
 osm_planet::vectortile::roads_medium_l    
