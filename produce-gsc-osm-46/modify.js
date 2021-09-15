@@ -134,6 +134,7 @@ const lut = {
   if (f.properties.status === 'f') {
     delete f
   }
+    delete f.properties['status']
     return f
   },
   landuse_naturalmedium_a: f => {
@@ -154,6 +155,7 @@ const lut = {
   if (f.properties.status === 'f') {
     delete f
   }
+    delete f.properties['status']
     return f
   },
 
@@ -222,7 +224,10 @@ const lut = {
       f.properties.name = ''
     }
     delete f.properties['ungsc_mission']
-
+  if (f.properties.status === 'f') {
+    delete f
+  }
+    delete f.properties['status']
     return f
   },
   roads_medium_l: f => {
@@ -708,6 +713,17 @@ const lut = {
       minzoom: 7,
       maxzoom: 15
     }
+
+    delete f.properties['class']
+    delete f.properties['fclass']
+    delete f.properties['ungsc_ctry']
+    delete f.properties['population']
+    delete f.properties['capital']
+    delete f.properties['is_capital']
+  if (f.properties.status === 'f') {
+    delete f
+  }
+
     return f 
 },
   places_all_a: f => {
