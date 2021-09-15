@@ -125,8 +125,15 @@ const lut = {
     }
     delete f.properties['class']
     delete f.properties['fclass']  // we keep z_order.
+    delete f.properties['en_name']
+    delete f.properties['int_name']
+    delete f.properties['name']
+    delete f.properties['ar_name']
     delete f.properties['ungsc_ctry']
     delete f.properties['ungsc_mission']
+  if (f.properties.status === 'f') {
+    delete f
+  }
     return f
   },
   landuse_naturalmedium_a: f => {
@@ -137,9 +144,16 @@ const lut = {
       maxzoom: 15
     }
     delete f.properties['class']
-    delete f.properties['ungsc_ctry']
     delete f.properties['fclass']  // we keep z_order.
+    delete f.properties['en_name']
+    delete f.properties['int_name']
+    delete f.properties['name']
+    delete f.properties['ar_name']
+    delete f.properties['ungsc_ctry']
     delete f.properties['ungsc_mission']
+  if (f.properties.status === 'f') {
+    delete f
+  }
     return f
   },
 
@@ -349,8 +363,15 @@ const lut = {
       maxzoom: 15
     }
     delete f.properties['class']
+    delete f.properties['en_name']
+    delete f.properties['int_name']
+    delete f.properties['name']
+    delete f.properties['ar_name']
     delete f.properties['ungsc_ctry']
     delete f.properties['ungsc_mission']
+  if (f.properties.status === 'f') {
+    delete f
+  }
     return f
   },
   buildings_a: f => {
