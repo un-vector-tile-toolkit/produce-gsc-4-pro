@@ -103,7 +103,7 @@ const lut = {
     }
     f.properties._source = 'hq'
     delete f.properties['objectid']
-//    delete f.properties['bdytyp_code']
+    delete f.properties['bdytyp_code']
   if (f.properties.bdytyp === '7') {
     f.tippecanoe.minzoom = 7
 //  } else if (f.properties.bdytyp === 'Administrative boundary 3') {
@@ -114,7 +114,6 @@ const lut = {
   if (f.properties.iso3cd == 'COL' || f.properties.iso3cd == 'COL_ECU' || f.properties.iso3cd == 'COL_PER' || f.properties.iso3cd == 'COL_VEN' || f.properties.iso3cd == 'BRA_COL' || f.properties.iso3cd == 'COL_PAN') {
     return null
   } else {
-    delete f.properties['iso3cd'] //added on September 16
     return f
   }
   },
@@ -135,7 +134,6 @@ const lut = {
     f.tippecanoe.minzoom = 6
     f.properties.bdytyp = f.properties.type
   }
-    delete f.properties['type'] //added on September 16
     return f
   },
   un_unmik_bndl_l: f => {
@@ -175,7 +173,6 @@ const lut = {
     f.tippecanoe.minzoom = 6
     f.properties.bdytyp = f.properties.level
   }
-    delete f.properties['level']
     return f
   },
 
@@ -290,9 +287,6 @@ f.properties.display = 1
       maxzoom: 8
     }
     f.properties._source = 'hq'
-    delete f.properties['objectid']
-    delete f.properties['romnam']
-    delete f.properties['maplab']
     return f
   },
   unmap_bnda_a2_ap: f => {
@@ -302,10 +296,6 @@ f.properties.display = 1
       maxzoom: 15
     }
     f.properties._source = 'hq'
-    delete f.properties['objectid']
-    delete f.properties['romnam']
-    delete f.properties['adm1nm']
-    delete f.properties['adm1cd']
     return f
   },
   custom_unmap_bnda_a1_ap: f => {
@@ -316,9 +306,7 @@ f.properties.display = 1
     }
     f.properties._source = 'c'
     f.properties.adm1nm = f.properties.adm1_name
-    delete f.properties['objectid']
     delete f.properties['adm1_name']
-    delete f.properties['romnam']
     return f
   },
   custom_unmap_bnda_a2_ap: f => {
@@ -329,9 +317,6 @@ f.properties.display = 1
     }
     f.properties._source = 'c'
     f.properties.adm2nm = f.properties.adm2_name
-    delete f.properties['objectid']
-    delete f.properties['name']
-    delete f.properties['adm1_name']
     delete f.properties['adm2_name']
     return f
   },
@@ -379,7 +364,7 @@ f.properties.display = 1
     f.tippecanoe = {
       layer: 'bnda_cty',
       minzoom: 6,
-      maxzoom: 7
+      maxzoom: 11
     }
     return f
   },
