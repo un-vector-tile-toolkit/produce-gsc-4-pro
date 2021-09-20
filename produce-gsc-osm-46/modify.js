@@ -193,6 +193,7 @@ const lut = {
       f.properties.name = ''
     }
     delete f.properties['ungsc_mission']
+    delete f.properties['fclass'] //added on 2021-09-20
     return f
   },
   waterways_large_l: f => {
@@ -208,6 +209,11 @@ const lut = {
       f.properties.name = ''
     }
     delete f.properties['ungsc_mission']
+  if (f.properties.status === 'f') {
+    delete f
+  }
+    delete f.properties['status']
+    delete f.properties['fclass'] //added on 2021-09-20
     return f
   },
 
@@ -228,6 +234,7 @@ const lut = {
     delete f
   }
     delete f.properties['status']
+    delete f.properties['fclass'] //added on 2021-09-20
     return f
   },
   roads_medium_l: f => {
@@ -242,6 +249,7 @@ const lut = {
       f.properties.name = ''
     }
     delete f.properties['ungsc_mission']
+    delete f.properties['fclass'] //added on 2021-09-20
     return f
   },
   roads_minor_l: f => {
@@ -256,6 +264,7 @@ const lut = {
       f.properties.name = ''
     }
     delete f.properties['ungsc_mission']
+    delete f.properties['fclass'] //added on 2021-09-20
     return f
   },
   roads_other_l: f => {
@@ -270,6 +279,7 @@ const lut = {
       f.properties.name = ''
     }
     delete f.properties['ungsc_mission']
+    delete f.properties['fclass'] //added on 2021-09-20
     return f
   },
   roads_special_l: f => {
@@ -284,6 +294,7 @@ const lut = {
       f.properties.name = ''
     }
     delete f.properties['ungsc_mission']
+    delete f.properties['fclass'] //added on 2021-09-20
     return f
   },
   // 5. railway
