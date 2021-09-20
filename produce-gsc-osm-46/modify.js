@@ -393,12 +393,14 @@ const lut = {
   buildings_a: f => {
     f.tippecanoe = {
       layer: 'building',
-      minzoom: 12,
+//      minzoom: 12,
+      minzoom: flap(f, 15), //test 2021-09-20
       maxzoom: 15
     }
     delete f.properties['min_height']
     delete f.properties['building_min_level']
     delete f.properties['roof_shape']
+    if (f.tippecanoe.minzoom > 14) f.tippecanoe.minzoom = 14 //test2021-09-20
     return f
   },
   osm_planet_other_buildings: f => {
