@@ -113,15 +113,45 @@ const minzoomWater = (f) => {
   }
 }
 
+const minzoomOsmplace = (f) => {
+  if (f.properties.z_order == 1) {
+    return 6
+  } else if (f.properties.z_order == 2 || f.properties.z_order == 3 ) {
+    return 9
+  } else {
+    return 12
+  }
+}
 
 const lut = {
   // nature
   landuse_naturallarge_a: f => {
     f.tippecanoe = {
       layer: 'nature-l',
-      minzoom: 11,
+      minzoom: 12,
       //minzoom: flap(f, 15),
       maxzoom: 15
+    }
+    delete f.properties['class']
+    delete f.properties['fclass']  // we keep z_order.
+    delete f.properties['en_name']
+    delete f.properties['int_name']
+    delete f.properties['name']
+    delete f.properties['ar_name']
+    delete f.properties['ungsc_ctry']
+    delete f.properties['ungsc_mission']
+  if (f.properties.status === 'f') {
+    delete f
+  }
+    delete f.properties['status']
+    return f
+  },
+  landuse_naturalmedium0609_a: f => {
+    f.tippecanoe = {
+      layer: 'nature-m',
+      minzoom: 8,
+      //minzoom: flap(f, 10),
+      maxzoom: 9
     }
     delete f.properties['class']
     delete f.properties['fclass']  // we keep z_order.
@@ -140,7 +170,7 @@ const lut = {
   landuse_naturalmedium_a: f => {
     f.tippecanoe = {
       layer: 'nature-m',
-      minzoom: 8,
+      minzoom: 10,
       //minzoom: flap(f, 10),
       maxzoom: 15
     }
@@ -723,20 +753,19 @@ const lut = {
   places_all_p: f => {
     f.tippecanoe = {
       layer: 'osm_place',
-      minzoom: 7,
+//      minzoom: 7,
+      minzoom: minzoomOsmplace(f), // added on 2021-09-21
       maxzoom: 15
     }
 
     delete f.properties['class']
     delete f.properties['fclass']
-    delete f.properties['ungsc_ctry']
     delete f.properties['population']
     delete f.properties['capital']
     delete f.properties['is_capital']
-  if (f.properties.status === 'f') {
+  if (f.properties.status === 'f' || f.properties.ungsc_mission === 'UNMIK' || f.properties.ungsc_mission === 'UNSMIL' || f.properties.ungsc_mission === 'MINUSCA' || f.properties.ungsc_mission === 'MONUSCO' || f.properties.ungsc_mission === 'UNIFIL' || f.properties.ungsc_mission === 'UNMISS' || f.properties.ungsc_mission === 'UNAMID' || f.properties.ungsc_mission === 'MINUJUSTH' || f.properties.ungsc_ctry === 'TUN' || f.properties.ungsc_ctry === 'LBN' || f.properties.ungsc_ctry === 'SOM' || f.properties.ungsc_ctry === 'SDN' || f.properties.ungsc_ctry === 'xAB' ) {
     delete f
   }
-
     return f 
 },
   places_all_a: f => {

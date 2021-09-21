@@ -112,6 +112,7 @@ osm-l: {
 osm_planet::vectortile::ferries_all_l              
 osm_planet::vectortile::landuse_naturallarge_a     
 osm_planet::vectortile::landuse_naturalmedium_a    
+osm_planet::vectortile::landuse_naturalmedium0609_a 
 osm_planet::vectortile::landuse_parkreserve_a      
 osm_planet::vectortile::landuse_urban_a                     
 osm_planet::vectortile::places_all_p               
