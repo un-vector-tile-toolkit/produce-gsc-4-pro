@@ -134,6 +134,7 @@ const lut = {
       maxzoom: 5
     }
     delete f.properties['objectid']
+    delete f.properties['iso3cd']
   //no need admin 1 and 2 for ZL5 
   if (f.properties.bdytyp === '6' ||f.properties.bdytyp === '7') {
     return null
@@ -148,6 +149,7 @@ const lut = {
       maxzoom: 4
     }
     delete f.properties['objectid']
+    delete f.properties['iso3cd']
   //no need admin 1 and 2 for small scale
   if (f.properties.bdytyp === '6' || f.properties.bdytyp === '7') {
     return null
@@ -194,13 +196,33 @@ const lut = {
       minzoom: 1,
       maxzoom: 1
     }
-   //if we need to remove features with status 1
-   //if (f.properties.status == 1) {
-   //delete f
-   //} 
+    delete f.properties['objectid']
+    delete f.properties['featureid']
+    delete f.properties['fontname']
+    delete f.properties['fontsize']
+    delete f.properties['bold']
+    delete f.properties['italc']
+    delete f.properties['underline']
+    delete f.properties['verticalalignment']
+    delete f.properties['horizontalalignment']
+    delete f.properties['xoffset']
+    delete f.properties['yoffset']
+    delete f.properties['angle']
+    delete f.properties['fontleading']
+    delete f.properties['wordspacing']
+    delete f.properties['characterwidth']
+    delete f.properties['characterspacing']
+    delete f.properties['flipangle']
+    delete f.properties['override']
+    delete f.properties['orig_fid']
+    delete f.properties['gdb_geomattr_data']
     delete f.properties['zorder']
     delete f.properties['element']
     delete f.properties['symbolid']
+   //if we need to remove features with status 1
+   if (f.properties.status == 1) {
+   delete f
+   } 
     return f
   },
   unmap_bnda_label_04_p: f => {
@@ -209,13 +231,33 @@ const lut = {
       minzoom: 2,
       maxzoom: 2
     }
-   //if we need to remove features with status 1
-   //if (f.properties.status == 1) {
-   //delete f
-   //} 
+    delete f.properties['objectid']
+    delete f.properties['featureid']
+    delete f.properties['fontname']
+    delete f.properties['fontsize']
+    delete f.properties['bold']
+    delete f.properties['italc']
+    delete f.properties['underline']
+    delete f.properties['verticalalignment']
+    delete f.properties['horizontalalignment']
+    delete f.properties['xoffset']
+    delete f.properties['yoffset']
+    delete f.properties['angle']
+    delete f.properties['fontleading']
+    delete f.properties['wordspacing']
+    delete f.properties['characterwidth']
+    delete f.properties['characterspacing']
+    delete f.properties['flipangle']
+    delete f.properties['override']
+    delete f.properties['orig_fid']
+    delete f.properties['gdb_geomattr_data']
     delete f.properties['zorder']
     delete f.properties['element']
     delete f.properties['symbolid']
+   //if we need to remove features with status 1
+   if (f.properties.status == 1) {
+   delete f
+   } 
     return f
   },
   unmap_bnda_label_05_p: f => {
@@ -224,13 +266,33 @@ const lut = {
       minzoom: 3,
       maxzoom: 3
     }
-   //if we need to remove features with status 1
-   //if (f.properties.status == 1) {
-   //delete f
-   //} 
+    delete f.properties['objectid']
+    delete f.properties['featureid']
+    delete f.properties['fontname']
+    delete f.properties['fontsize']
+    delete f.properties['bold']
+    delete f.properties['italc']
+    delete f.properties['underline']
+    delete f.properties['verticalalignment']
+    delete f.properties['horizontalalignment']
+    delete f.properties['xoffset']
+    delete f.properties['yoffset']
+    delete f.properties['angle']
+    delete f.properties['fontleading']
+    delete f.properties['wordspacing']
+    delete f.properties['characterwidth']
+    delete f.properties['characterspacing']
+    delete f.properties['flipangle']
+    delete f.properties['override']
+    delete f.properties['orig_fid']
+    delete f.properties['gdb_geomattr_data']
     delete f.properties['zorder']
     delete f.properties['element']
     delete f.properties['symbolid']
+   //if we need to remove features with status 1
+   if (f.properties.status == 1) {
+   delete f
+   } 
     return f
   },
   unmap_bnda_label_06_p: f => {
@@ -239,13 +301,33 @@ const lut = {
       minzoom: 4,
       maxzoom: 5
     }
-   //if we need to remove features with status 1
-   //if (f.properties.status == 1) {
-   //delete f
-   //} 
+    delete f.properties['objectid']
+    delete f.properties['featureid']
+    delete f.properties['fontname']
+    delete f.properties['fontsize']
+    delete f.properties['bold']
+    delete f.properties['italc']
+    delete f.properties['underline']
+    delete f.properties['verticalalignment']
+    delete f.properties['horizontalalignment']
+    delete f.properties['xoffset']
+    delete f.properties['yoffset']
+    delete f.properties['angle']
+    delete f.properties['fontleading']
+    delete f.properties['wordspacing']
+    delete f.properties['characterwidth']
+    delete f.properties['characterspacing']
+    delete f.properties['flipangle']
+    delete f.properties['override']
+    delete f.properties['orig_fid']
+    delete f.properties['gdb_geomattr_data']
     delete f.properties['zorder']
     delete f.properties['element']
     delete f.properties['symbolid']
+   //if we need to remove features with status 1
+   if (f.properties.status == 1) {
+   delete f
+   } 
     return f
   },
   unmap_phyp_label_04_p: f => {
