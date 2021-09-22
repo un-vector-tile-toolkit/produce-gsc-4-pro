@@ -105,7 +105,6 @@ const lut = {
       maxzoom: 5
     }
     delete f.properties['objectid']
-    delete f.properties['fid_1']
     return f
   },
   un_glc30_global_lc_ss_a: f => {
@@ -163,6 +162,7 @@ const lut = {
       maxzoom: 2
     }
     delete f.properties['objectid']
+    delete f.properties['iso3cd']
   //no need admin 1 and 2 for small scale
   if (f.properties.bdytyp === '6' || f.properties.bdytyp === '7') {
     return null
