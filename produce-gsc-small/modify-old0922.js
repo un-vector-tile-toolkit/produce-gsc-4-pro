@@ -59,20 +59,31 @@ const flap = (f, defaultZ) => {
 
 const lut = {
 //osm
+  landuse_naturalmedium0609_a: f => {
+//    let lc_arr = [20, 30, 80]
+//    if (!lc_arr.includes(f.properties.gridcode)) return null
+    f.tippecanoe = {
+      layer: 'nature-s',
+      minzoom: 5,
+      maxzoom: 5
+    }
+    delete f.properties['id']
+    delete f.properties['osm_id']
+    delete f.properties['class']
+    delete f.properties['ungsc_ctry']
+    delete f.properties['ungsc_mission']
+    return f
+  },
   roads_major_0408_l: f => {
     f.tippecanoe = {
       layer: 'road-s',
-      minzoom: 4,
+      minzoom: 3,
       maxzoom: 5
     }
     delete f.properties['id']
     delete f.properties['osm_id']
     delete f.properties['class']
     delete f.properties['fclass']
-    delete f.properties['en_name']
-    delete f.properties['int_name']
-    delete f.properties['name']
-    delete f.properties['ar_name']
     delete f.properties['ref']
     delete f.properties['bridge']
     delete f.properties['tunnel']
@@ -90,8 +101,7 @@ const lut = {
 //    } else {
 //    return f
 //    }
-    if (f.properties.z_order == 1 || f.properties.z_order == 3){
-//    if (f.properties.z_order == 1 || f.properties.z_order == 3 || f.properties.z_order == 5 || f.properties.z_order == 7){
+    if (f.properties.z_order == 1 || f.properties.z_order == 3 || f.properties.z_order == 5 || f.properties.z_order == 7){
     return f
     } else {
     return null
@@ -114,8 +124,7 @@ const lut = {
       minzoom: 3,
       maxzoom: 5
     }
-    delete f.properties['objectid']
-    delete f.properties['objectid_1']
+    delete f.properties['id']
     return f
   },
   custom_ne_10m_bathymetry_a: f => {

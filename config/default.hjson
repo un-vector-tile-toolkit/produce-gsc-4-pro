@@ -36,7 +36,6 @@ un-s: {
 osm-s: {
   Z: 0
   relations: [
-   osm_planet::vectortile::landuse_naturalmedium0609_a
    osm_planet::vectortile::roads_major_0408_l 
    ]
   mbtilesDir: produce-gsc-small/osm-s-tile
