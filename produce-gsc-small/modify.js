@@ -113,9 +113,13 @@ const lut = {
       minzoom: 3,
       maxzoom: 5
     }
+  if (f.properties.gridcode == 20 || f.properties.gridcode == 30) {
     delete f.properties['objectid']
     delete f.properties['objectid_1']
     return f
+  } else {
+    return null 
+  }
   },
   custom_ne_10m_bathymetry_a: f => {
     f.tippecanoe = {
