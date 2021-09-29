@@ -168,7 +168,8 @@ SELECT column_name FROM information_schema.columns
 if (table == 'roads_major_0408_l' ){
       sql = `
 DECLARE cur CURSOR FOR 
-SELECT ST_Simplify(ST_LineMerge(ST_Collect(ARRAY(SELECT geom FROM ${schema}.${table} WHERE z_order=1 OR z_order=3))),0.001, true)
+SELECT ST_AsGeoJSON(ST_Simplify(ST_LineMerge(ST_Collect(ARRAY(SELECT geom FROM ${schema}.${table} WHERE z_order=1 OR z_order=3))),0.001, true))
+
 ` 
 } else {
       sql = `
