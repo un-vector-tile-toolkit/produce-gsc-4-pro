@@ -170,8 +170,8 @@ const lut = {
   landuse_naturalmedium_a: f => {
     f.tippecanoe = {
       layer: 'nature-m',
-      minzoom: 10,
-      //minzoom: flap(f, 10),
+      //minzoom: 10,
+      minzoom: flap(f, 10),
       maxzoom: 15
     }
     delete f.properties['class']
