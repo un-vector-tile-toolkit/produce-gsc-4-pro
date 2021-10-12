@@ -11,7 +11,7 @@ const { Pool, Query } = require('pg')
 const Spinner = require('cli-spinner').Spinner
 const winston = require('winston')
 const DailyRotateFile = require('winston-daily-rotate-file')
-const modify = require('./modify.js')
+const modify = require('./modify-z16.js')
 
 // config constants
 const host = config.get('osm-l.host')
