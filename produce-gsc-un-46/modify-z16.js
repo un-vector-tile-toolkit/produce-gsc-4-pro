@@ -83,7 +83,7 @@ const lut = {
     f.tippecanoe = {
       layer: 'landmass',
       minzoom: 8,
-      maxzoom: 16
+      maxzoom: 15
     } 
     return f
   },
@@ -93,6 +93,15 @@ const lut = {
       minzoom: 8,
       maxzoom: 13
     } 
+    return f
+  },
+  custom_planet_coastline_l: f => {
+    f.tippecanoe = {
+      layer: 'cstl',
+      minzoom: 10,
+      maxzoom: 16
+    } 
+    delete f.properties['objectid']
     return f
   },
  // Admin

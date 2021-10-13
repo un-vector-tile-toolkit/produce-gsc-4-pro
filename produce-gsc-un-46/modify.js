@@ -95,6 +95,15 @@ const lut = {
     } 
     return f
   },
+  custom_planet_coastline_l: f => {
+    f.tippecanoe = {
+      layer: 'cstl',
+      minzoom: 10,
+      maxzoom: 15
+    } 
+    delete f.properties['objectid']
+    return f
+  },
  // Admin
   unmap_bndl_l: f => {
     f.tippecanoe = {

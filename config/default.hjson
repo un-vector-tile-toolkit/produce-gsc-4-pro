@@ -87,6 +87,7 @@ un-l: {
     un_base::vectortile::un_minusca_pois_p
     un_base::vectortile::unmap_phyp_p
     un_base::vectortile::unmap_popp_p
+    un_base::vectortile::custom_planet_coastline_l
    ]
   mbtilesDir: produce-gsc-un-46/mbtiles/un_tile
   propertyBlacklist: [
